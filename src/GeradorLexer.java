@@ -7,6 +7,8 @@ import static jflex.Main.generate;
 public class GeradorLexer {
 
     public static void main(String[] args) {
+        App app = new App();
+        app.setVisible(true);
         String [] rotas = new String[1];
         rotas[0] = "/home/60003373/faculdade/compiladores/atividade/compiler/src/Lexer.flex";
         try{
