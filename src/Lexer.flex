@@ -1,6 +1,5 @@
 /* Pacote para o Analisador Léxico */
-package codigo;
-import static codigo.codigo.Tokens.*;
+import static codigo.Tokens.*;
 %%
 %class Lexer  /* Classe a ser criada com o  mesmo nome do arquivo vazio  */
 %type codigo.Tokens  /* Definição  dos tokens como uma expressão regular */
@@ -15,6 +14,7 @@ ESPACO=[ ,\t,\r,\n]+  /* Conjunto de caracteres "espaço", "tabulação", "retor
 int |
 print |
 read |
+class |
 for {lexema=yytext(); return RESERVADA;}
 {ESPACO} {/*Ignore*/}    /* Definição de espaço para ignorar */
 "//".* {/*Ignore*/}      /* Definição de comentários na mesma linha */
@@ -24,6 +24,10 @@ for {lexema=yytext(); return RESERVADA;}
 ";" {return PONTO_E_VIRGULA;}  /* Definição de término de comando */
 "(" {return ABRE_PARENTESES;}  /* Definição de separadores - colocar todos os separadores*/
 ")" {return FECHA_PARENTESES;}
+"{" {return ABRE_CHAVES;}
+"}" {return FECHA_CHAVES;}
+"!=" {return DIFERENTE;}
+"," {return VIRGULA;}
 {L}({L}|{D})* {lexema=yytext(); return IDENTIFICADOR;}   /* Definição de Identificador */
 {D}+ {lexema=yytext(); return INT_CONSTANTE;}            /* Definição de inteiros */
 ("'".*"'" |"\"".*"\"") {lexema=yytext(); return STRING_CONSTANTE;}  /* Definição de cadeia de caracteres (strings) */

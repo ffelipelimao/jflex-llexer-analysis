@@ -1,12 +1,15 @@
 package codigo;
 
-public enum Tokens {
+public enum Tokens{
     RESERVADA,
     INT_CONSTANTE,
     STRING_CONSTANTE,
     SOMA,
     IGUAL,
+    ABRE_CHAVES,
+    FECHA_CHAVES,
     DIFERENTE,
+    VIRGULA,
     PONTO_E_VIRGULA,
     IDENTIFICADOR,
     ATRIBUICAO,
