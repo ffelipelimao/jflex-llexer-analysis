@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="520" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-12632257"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="9e8ec" class="javax.swing.JButton" binding="analisarButton" default-binding="true">
@@ -25,7 +27,11 @@
         <children>
           <component id="9053b" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
             <constraints/>
-            <properties/>
+            <properties>
+              <background color="-13355980"/>
+              <font name="Fira Code" size="12" style="1"/>
+              <foreground color="-1"/>
+            </properties>
           </component>
         </children>
       </scrollpane>
@@ -38,7 +44,13 @@
         <children>
           <component id="28357" class="javax.swing.JTextArea" binding="textArea2" default-binding="true">
             <constraints/>
-            <properties/>
+            <properties>
+              <background color="-13355980"/>
+              <font name="Fira Code" size="12" style="1"/>
+              <foreground color="-1"/>
+              <text value=""/>
+              <wrapStyleWord value="false"/>
+            </properties>
           </component>
         </children>
       </scrollpane>

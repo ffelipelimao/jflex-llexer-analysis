@@ -1,6 +1,8 @@
 import codigo.Tokens;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
@@ -12,7 +14,6 @@ public class App extends JFrame {
     private JTextArea textArea1;
     private JTextArea textArea2;
     private JButton analisarButton;
-
 
     public App() {
         add(painel);
@@ -86,8 +87,29 @@ public class App extends JFrame {
                 case DIFERENTE:
                     resultado += "Token: " + token + " !=\n";
                     break;
-                case VIRGULA:
-                    resultado += "Token: " + token + " ,\n";
+                case MENOR_QUE:
+                    resultado += "Token: " + token + " <\n";
+                    break;
+                case MAIOR_QUE:
+                    resultado += "Token: " + token + " >\n";
+                    break;
+                case MENOR_IGUAL_QUE:
+                    resultado += "Token: " + token + " <=\n";
+                    break;
+                case MAIOR_IGUAL_QUE:
+                    resultado += "Token: " + token + " >=\n";
+                    break;
+                case SUBTRACAO:
+                    resultado += "Token: " + token + " -\n";
+                    break;
+                case MULTIPLICACAO:
+                    resultado += "Token: " + token + " *\n";
+                    break;
+                case DIVISAO:
+                    resultado += "Token: " + token + " /\n";
+                    break;
+                case SOBRA_DIVISAO:
+                    resultado += "Token: " + token + " %\n";
                     break;
                 default:
                     resultado += "Token: " + token +  " " + lexer.lexema + "\n";
@@ -95,8 +117,7 @@ public class App extends JFrame {
         }
     }
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         App app = new App();
         app.setVisible(true);
     }
