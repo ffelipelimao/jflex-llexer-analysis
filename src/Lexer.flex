@@ -43,8 +43,11 @@ for {lexema=yytext(); return RESERVADA;}
 ">=" {return MAIOR_IGUAL_QUE;}
 "-" {return SUBTRACAO;}
 "*" {return MULTIPLICACAO;}
+"." {return PONTO;}
+":" {return DOIS_PONTOS;}
 "/" {return DIVISAO;}
 "%" {return SOBRA_DIVISAO;}
+[\"] {return ASPAS_DUPLAS;}
 ("&" | "!" | "#" | "|" | "~"| "^" | "@" | "$") {lexema=yytext(); return SIMBOLOS_ESPECIAIS;}
 {L}({L}|{D}|"_")* {lexema=yytext(); return IDENTIFICADOR;}   /* Definição de Identificador */
 {D}+ {lexema=yytext(); return INT_CONSTANTE;}            /* Definição de inteiros */

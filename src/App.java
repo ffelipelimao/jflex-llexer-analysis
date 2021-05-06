@@ -114,6 +114,15 @@ public class App extends JFrame {
                 case SIMBOLOS_ESPECIAIS:
                     resultado += "Token: " + token +  " " + lexer.lexema + "\n";
                     break;
+                case PONTO:
+                    resultado += "Token: " + token + " .\n";
+                    break;
+                case DOIS_PONTOS:
+                    resultado += "Token: " + token + " :\n";
+                    break;
+                case ASPAS_DUPLAS:
+                    resultado += "Token: " + token + " \\\"\n";
+                    break;
                 default:
                     resultado += "Token: " + token +  " " + lexer.lexema + "\n";
             }
