@@ -23,5 +23,6 @@ public enum Tokens{
     SUBTRACAO,
     MULTIPLICACAO,
     DIVISAO,
-    SOBRA_DIVISAO
+    SOBRA_DIVISAO,
+    SIMBOLOS_ESPECIAIS
 }

@@ -45,6 +45,7 @@ for {lexema=yytext(); return RESERVADA;}
 "*" {return MULTIPLICACAO;}
 "/" {return DIVISAO;}
 "%" {return SOBRA_DIVISAO;}
+("&" | "!" | "#" | "|" | "~"| "^" | "@" | "$") {lexema=yytext(); return SIMBOLOS_ESPECIAIS;}
 {L}({L}|{D}|"_")* {lexema=yytext(); return IDENTIFICADOR;}   /* Definição de Identificador */
 {D}+ {lexema=yytext(); return INT_CONSTANTE;}            /* Definição de inteiros */
 ("'".*"'" |"\"".*"\"") {lexema=yytext(); return STRING_CONSTANTE;}  /* Definição de cadeia de caracteres (strings) */

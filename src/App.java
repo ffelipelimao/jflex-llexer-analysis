@@ -111,6 +111,9 @@ public class App extends JFrame {
                 case SOBRA_DIVISAO:
                     resultado += "Token: " + token + " %\n";
                     break;
+                case SIMBOLOS_ESPECIAIS:
+                    resultado += "Token: " + token +  " " + lexer.lexema + "\n";
+                    break;
                 default:
                     resultado += "Token: " + token +  " " + lexer.lexema + "\n";
             }
