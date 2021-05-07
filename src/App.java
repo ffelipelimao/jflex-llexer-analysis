@@ -123,6 +123,12 @@ public class App extends JFrame {
                 case ASPAS_DUPLAS:
                     resultado += "Token: " + token + " \\\"\n";
                     break;
+                case ABRE_BRACKETS:
+                    resultado += "Token: " + token + " [\n";
+                    break;
+                case FECHA_BRACKETS:
+                    resultado += "Token: " + token + " ]\n";
+                    break;
                 default:
                     resultado += "Token: " + token +  " " + lexer.lexema + "\n";
             }

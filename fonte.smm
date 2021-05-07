@@ -1,0 +1,6 @@
+class HelloWorld {
+	int execute() 
+	{ 
+			print "Hello World"
+	 } 
+}

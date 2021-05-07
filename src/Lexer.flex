@@ -47,6 +47,8 @@ for {lexema=yytext(); return RESERVADA;}
 ":" {return DOIS_PONTOS;}
 "/" {return DIVISAO;}
 "%" {return SOBRA_DIVISAO;}
+"[" {return ABRE_BRACKETS;}
+"]" {return FECHA_BRACKETS;}
 [\"] {return ASPAS_DUPLAS;}
 ("&" | "!" | "#" | "|" | "~"| "^" | "@" | "$") {lexema=yytext(); return SIMBOLOS_ESPECIAIS;}
 {L}({L}|{D}|"_")* {lexema=yytext(); return IDENTIFICADOR;}   /* Definição de Identificador */

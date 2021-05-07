@@ -27,5 +27,7 @@ public enum Tokens{
     SIMBOLOS_ESPECIAIS,
     PONTO,
     DOIS_PONTOS,
-    ASPAS_DUPLAS
+    ASPAS_DUPLAS,
+    ABRE_BRACKETS,
+    FECHA_BRACKETS
 }
